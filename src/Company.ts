@@ -17,4 +17,7 @@ export class Company implements Profile{
       lng : parseFloat(faker.address.longitude())
     }
   }
+  displayText(): string {
+    return `${this.companyName}//${this.catchPhrase}`
+  }
 }

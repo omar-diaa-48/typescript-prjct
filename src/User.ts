@@ -12,4 +12,7 @@ export class User implements Profile{
       lng : parseFloat(faker.address.longitude())
     }
   }
+  displayText(): string {
+    return this.name
+  }
 }
