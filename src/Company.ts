@@ -1,6 +1,7 @@
+import { Profile } from './Profile';
 import faker from 'faker';
 
-export class Company{
+export class Company implements Profile{
   companyName:string
   catchPhrase:string
   location : {

@@ -1,12 +1,10 @@
 import faker from 'faker';
+import { Profile } from './Profile';
 
-export class User{
-  name:string
-  location:{
-    lat:number,
-    lng:number
-  }
-
+export class User implements Profile{
+  name: string;
+  location: { lat: number; lng: number; };
+  
   constructor() {
     this.name = faker.name.findName();
     this.location = {
@@ -14,5 +12,4 @@ export class User{
       lng : parseFloat(faker.address.longitude())
     }
   }
-
 }
